@@ -1,0 +1,249 @@
+/* ===============================
+   ROOT COLORS – TRINIDAD & TOBAGO
+================================ */
+:root {
+  --red: #da1a28;
+  --black: #000;
+  --white: #fff;
+  --gray: #f5f5f5;
+}
+
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--red);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ===============================
+   HEADER & LOGO
+================================ */
+header {
+  background: linear-gradient(
+    to right,
+    #000 0%,
+    #000 8%,
+    #fff 8%,
+    #fff 14%,
+    #000 14%,
+    #000 20%,
+    #c8102e 20%,
+    #c8102e 100%
+  );
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-area img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.tagline {
+  color: var(--white);
+  margin-top: 5px;
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+nav {
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* ===============================
+   HERO VIDEO — CONDENSED & FULL VIEW
+================================ */
+.video-hero {
+  position: relative;
+  height: auto;
+  max-height: 420px;
+  padding: 20px;
+  background-color: #000; /* clean letterbox background */
+  display: grid;
+  place-items: center;
+}
+
+/* VIDEO FIT — SHOW ENTIRE VIDEO */
+.video-hero video {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain; /* SHOW FULL VIDEO */
+  border-radius: 18px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay h2 {
+  color: var(--white);
+  font-size: 2.3rem;
+  padding: 0 20px;
+}
+
+/* ===============================
+   SECTION STYLES
+================================ */
+section {
+  background: var(--white);
+  margin: 2rem auto;
+  padding: 3.5rem 1.5rem;
+  max-width: 1200px;
+  border-radius: 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--red);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* ===============================
+   MENU & SIGNATURE GRID
+================================ */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.item {
+  background: var(--gray);
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECTS */
+.item:hover img {
+  transform: scale(1.08);
+}
+
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.2);
+}
+
+.item h3 {
+  margin-top: 15px;
+}
+
+.item span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--red);
+}
+
+/* ===============================
+   ABOUT SECTION (CENTERED & CONDENSED)
+================================ */
+.about-container {
+  display: flex;
+  flex-direction: column; /* stack image above text */
+  align-items: center;
+  gap: 25px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 260px;   /* CONDENSE IMAGE */
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.about-text {
+  max-width: 800px;
+  text-align: center;
+}
+
+  .social-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .social-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .social-buttons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .facebook-btn {
+    background-color: #4267B2; /* Facebook Blue */
+  }
+
+  .tiktok-btn {
+    background-color: #000000; /* TikTok Black */
+  }
